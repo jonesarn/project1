@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <style>
+            body{
+              background-color:#1a1a1a;
+              color:whitesmoke;  
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                background-color: #d5dde4;
+                padding: 10px;
+            }
+            .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.img_button{
+    width:10rem;
+    height:7rem;
+}
+.square{
+                background-color: #5c86aa;
+                height:5rem;
+                width:100%;           
+}
+.square1{
+                background-color: #d5dde4;
+                height:15rem;
+                width:100%;
+}
+        </style>
+    </head>
+    <body>
+        <h1 id= "Title">Welcome</h1>
+
+        <h2>Name</h2>
+            
+            
+        <input type="text" id="username">
+        <button id="submit">Submit</button>
+        <br>
+        <br>
+        <br>
+        <div class="grid-container">
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="iphone_1.png" alt="iphone 1"/>
+                </button>
+            </div>
+            <div class="grid-item">
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="iphone3g.jpg" alt="iphone 3">
+                </button>
+            </div>
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="iphoe 4.jpg" alt="iphone 4">
+            </button>
+            </div>  
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="topic_iphone_5.png" alt="iphone 5">
+            </button>
+            </div>
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="iphone-6s-plus-front-back.jpg" alt="iphone 6">
+            </button>
+            </div>
+            <div class="grid-item">
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="iphone 7.jpg" alt="iphone 7">
+            </button>
+            </div>  
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="ipad air.jpg" alt="ipad air">
+            </button>
+            </div>
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="ipad mini.jpg" alt="ipad mini">
+            </button>
+            </div>
+            <div class="grid-item" >
+                <button class="button1" onclick="my_quantity()">
+                <img class="img_button" src="ipad mini.jpg" alt="Macbook">
+            </button>
+            </div>
+          </div>
+           <div>
+               <h2>Total</h2>
+               <div class="square1">
+               <div class="square">
+                   <h3>Buyer Name:</h3>
+                <p id ="demo"></p>
+               </div>
+               <div class="square">
+                <h3>Product:</h3>
+             <p id ="demo2"></p>
+            </div>
+           </div>
+        </div>
+        <script>
+            alert("Welcome to lesson 3")
+            alert("Today we are going shopping")
+            alert("Click the photo and type the quantity")
+
+            //Enter name and submit it to  the square
+
+            document.getElementById("submit").onclick =
+            function(){
+                let user = document.getElementById("username").value;
+                    document.getElementById("demo").innerHTML = user;
+                }
+
+            //click image and add quanitity
+        
+        function my_quantity(){
+            var quant = prompt("Please enter your quantity");
+            var numbers = /^[0-9]+$/;
+          if (quant !== numbers){
+            let product = document.getElementsByClassName("img_button").value;
+                    document.getElementById("demo2").innerHTML = product;
+          } else{ 
+            //to stop someone from not putting in words
+            alert("not a number")
+          }
+}
+
+        
+        </script>
+    </body>
+</html>
